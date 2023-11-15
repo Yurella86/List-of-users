@@ -1,8 +1,11 @@
+import {
+  Home
+} from './components/index'
 
 function App() {
   return (
     <div className="App">
-      start
+      <Home />
     </div>
   );
 }
