@@ -1,4 +1,4 @@
-@import "../components/Pages/HomePage.scss";
+@import "./HomePage.scss";
 
 * {
     padding: 0;
@@ -10,6 +10,10 @@
 
 body {
     max-width: 1170px;
+    background-image: url("../image/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: 5px auto;
     padding: 0px 30px;
 }

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import '../../style/extend.scss'
-import { UserItem } from '../index'
+import { UserList, SearchBar } from '../index';
 
 const HomePage = () => {
+
     return (
-        <div>
+        <Fragment>
             <header>
                 <div className='hd-wrapper'>
                     <div className="title">
@@ -13,30 +14,16 @@ const HomePage = () => {
                 </div>
             </header>
             <main>
-                <section className='filters'>search</section>
+                <section className='filters'>
+                    <SearchBar />
+                </section>
                 <section className='content'>
                     <div className="wrap-content">
-                        <div className='flex-container'>
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                            <UserItem />
-                        </div>
+                        <UserList />
                     </div>
                 </section>
             </main>
-        </div>
+        </Fragment>
     );
 };
 

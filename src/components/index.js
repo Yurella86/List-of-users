@@ -1,9 +1,13 @@
 import Home from './Pages/HomePage';
-import UserItem from './Users/UserItem'
+import UserList from './Users/UserList'
+import User from './Users/User/User'
 import userLogo from '../image/user-logo.png'
+import SearchBar from '../components/Search/SearchBar'
 
 export {
     Home,
-    UserItem,
-    userLogo
+    UserList,
+    User,
+    userLogo,
+    SearchBar
 }
