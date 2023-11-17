@@ -7,7 +7,6 @@ import { ThreeDots } from 'react-loader-spinner';
 const UserList = () => {
 
     const usersCtx = useContext(UsersContext)
-    console.log(usersCtx);
 
     if (!usersCtx) {
         return (

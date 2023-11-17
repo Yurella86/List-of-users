@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { userLogo } from '../../index'
 
 const User = ({ name, userName, email, phone }) => {
+    const [phoneHref, setPhoneHref] = useState('')
+    const [formattedNumber, setFormattedNumber] = useState('')
 
 
-
-    function formatPhoneNumber(number) {
-        let regExPhone = number.match(/^.*(?=x)/g)
-
-        let phoneNumber = !regExPhone ? number : String(regExPhone);
+    useState(() => {
+        let regExPhone = phone.match(/^.*(?=x)/g)
+        let phoneNumber = !regExPhone ? phone : String(regExPhone);
         let numericOnly = phoneNumber.replace(/\D/g, '');
-        var formattedNumber = numericOnly.replace(/(\d{3})(\d{3})(\d{4})/, '($1)$2-$3');
-        return formattedNumber;
-    }
-
-    var formattedPhoneNumbers = formatPhoneNumber(phone);
+        setPhoneHref(numericOnly)
+        let formatNumber = numericOnly.replace(/(\d{3})(\d{3})(\d{4})/, '($1)$2-$3');
+        setFormattedNumber(formatNumber)
+    }, phone)
 
 
     return (
@@ -28,7 +27,9 @@ const User = ({ name, userName, email, phone }) => {
                 </div>
                 <div className='email'>{email}</div>
                 {/* <div className='phone'>{regExPhone ? regExPhone : phone}</div> */}
-                <div className='phone'>{formattedPhoneNumbers}</div>
+                <div className='phone'>
+                    <a href={`tel:+1${phoneHref}`}>{formattedNumber}</a>
+                </div>
             </div>
         </div>
     );

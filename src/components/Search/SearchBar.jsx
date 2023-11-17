@@ -12,8 +12,8 @@ const SearchBar = () => {
                 <div className='select-filter'>
                     <label htmlFor="">Sort:</label>
                     <select name="select">
-                        <option value="value1" selected>asc</option>
-                        <option value="value2">desc</option>
+                        <option value="asc">asc</option>
+                        <option value="desc">desc</option>
                     </select>
                 </div>
                 <div></div>

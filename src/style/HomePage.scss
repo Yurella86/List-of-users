@@ -6,12 +6,17 @@
     .title {
         text-align: center;
         font-size: 18px;
+        text-transform: capitalize;
     }
 }
 
 section:first-of-type {
     margin: 5px auto;
     border: 1px solid rgb(10, 10, 121);
+}
+
+section.content {
+    margin: 20px 15px;
 }
 
 .item {
@@ -23,10 +28,10 @@ section:first-of-type {
     border: 1px solid rgb(185, 185, 185);
     text-align: center;
     flex-direction: column;
-    flex: 1 0 300px;
+    flex: 1 0 200px;
     cursor: pointer;
     background-color: white;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
     margin: 10px auto;
     border-radius: 4px;
 
@@ -37,7 +42,7 @@ section:first-of-type {
     &:hover {
         z-index: 100;
         transform: scale(1.15, 1.15);
-        transition: all 0.5s ease;
+        transition: all 0.2s ease;
         border: none;
         box-shadow: 0px 0px 15px rgb(43, 43, 43);
     }
@@ -66,6 +71,13 @@ section:first-of-type {
     .email {
         font-weight: 600;
         font-size: 12px;
+    }
+
+    .phone {
+        a {
+            color: rgb(0, 81, 173);
+            text-decoration: none;
+        }
     }
 }
 
