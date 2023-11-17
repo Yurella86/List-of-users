@@ -81,7 +81,7 @@ section.content {
     }
 }
 
-.flex-container {
+.flex-hr {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -98,7 +98,7 @@ section.content {
 //search-container
 .search-container {
     padding: 10px 20px;
-    .flex-container {
+    .flex-hr {
         justify-content: flex-start;
 
         div {
