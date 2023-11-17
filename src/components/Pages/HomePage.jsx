@@ -1,8 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import '../../style/extend.scss'
 import { UserList, SearchBar } from '../index';
 
 const HomePage = () => {
+    const [sortUsers, setSortUsers] = useState('asc')
+    const [searchUsers, setSearchUsers] = useState('')
 
     return (
         <Fragment>
@@ -15,11 +17,15 @@ const HomePage = () => {
             </header>
             <main>
                 <section className='filters'>
-                    <SearchBar />
+                    <SearchBar
+                        sortUsers={sortUsers}
+                        searchUsers={searchUsers}
+                        callbackSort={(d) => setSortUsers(d)}
+                        callbackSearch={(w) => setSearchUsers(w)} />
                 </section>
                 <section className='content'>
                     <div className="wrap-content">
-                        <UserList />
+                        <UserList sortUsers={sortUsers} searchUsers={searchUsers} />
                     </div>
                 </section>
             </main>

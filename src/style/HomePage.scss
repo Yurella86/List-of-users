@@ -32,7 +32,6 @@ section.content {
     cursor: pointer;
     background-color: white;
     transition: all 1s ease;
-    margin: 10px auto;
     border-radius: 4px;
 
     .wrap-item {
@@ -81,11 +80,11 @@ section.content {
     }
 }
 
-.flex-container {
+.flex-hr {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .loading-users {
@@ -98,8 +97,11 @@ section.content {
 //search-container
 .search-container {
     padding: 10px 20px;
-    .flex-container {
+    line-height: 2;
+
+    .flex-hr {
         justify-content: flex-start;
+        align-items: center;
 
         div {
             padding-right: 30px;
@@ -115,5 +117,18 @@ section.content {
         margin-right: 5px;
         color: rgb(0, 81, 173);
         font-weight: 600;
+    }
+
+    button {
+        padding: 2px 10px;
+        background-color: rgb(30, 103, 187);
+        color: white;
+        font-weight: 400;
+        border-radius: 3px;
+        border: none;
+
+        &:hover {
+            background-color: rgb(0, 81, 173);
+        }
     }
 }
