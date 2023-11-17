@@ -3,7 +3,6 @@ import UsersContext from './UsersContext';
 
 const UsersProvider = (props) => {
     const [users, setUsers] = useState();
-    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchUsers = async () => {
