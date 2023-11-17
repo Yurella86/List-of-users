@@ -4,7 +4,7 @@ import { User } from '../index'
 import '../../style/extend.scss'
 import { ThreeDots } from 'react-loader-spinner';
 
-const UserList = () => {
+const UserList = ({ sortUsers, searchUsers }) => {
 
     const usersCtx = useContext(UsersContext)
 
@@ -23,7 +23,15 @@ const UserList = () => {
         )
     }
 
-    const itemsOfUsers = usersCtx.map((user, index) =>
+    const sortedUsers = usersCtx.sort((a, b) => {
+        if (sortUsers === 'asc') {
+            return a.name.localeCompare(b.name);
+        } else {
+            return b.name.localeCompare(a.name);
+        }
+    });
+
+    const itemsOfUsers = sortedUsers.map((user, index) =>
         <User
             key={index + 1}
             id={user.id}
@@ -32,8 +40,24 @@ const UserList = () => {
             email={`${user.email}`}
             phone={`${user.phone}`} />)
 
+
+    if (searchUsers) {
+        let resultUsers = [];
+
+        for (let i = 0; i < itemsOfUsers.length; i++) {
+            if (itemsOfUsers[i].props.name.toLowerCase().startsWith(searchUsers.toLowerCase())) {
+                resultUsers.push(itemsOfUsers[i]);
+            }
+        }
+        return (
+            <div className='flex-hr'>
+                {resultUsers}
+            </div>
+        )
+    }
+
     return (
-        <div className='flex-container'>
+        <div className='flex-hr'>
             {itemsOfUsers}
         </div>
     );
