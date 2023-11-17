@@ -18,6 +18,8 @@ const HomePage = () => {
             <main>
                 <section className='filters'>
                     <SearchBar
+                        sortUsers={sortUsers}
+                        searchUsers={searchUsers}
                         callbackSort={(d) => setSortUsers(d)}
                         callbackSearch={(w) => setSearchUsers(w)} />
                 </section>
