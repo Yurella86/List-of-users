@@ -42,16 +42,14 @@ const UserList = ({ sortUsers, searchUsers }) => {
 
 
     if (searchUsers) {
-        let resultUsers = [];
+        const filteredData = itemsOfUsers.filter(item =>
+            item.props.name.toLowerCase().includes(searchUsers.toLowerCase()) ||
+            item.props.userName.toLowerCase().includes(searchUsers.toLowerCase())
+        );
 
-        for (let i = 0; i < itemsOfUsers.length; i++) {
-            if (itemsOfUsers[i].props.name.toLowerCase().startsWith(searchUsers.toLowerCase())) {
-                resultUsers.push(itemsOfUsers[i]);
-            }
-        }
         return (
             <div className='flex-hr'>
-                {resultUsers}
+                {filteredData}
             </div>
         )
     }
