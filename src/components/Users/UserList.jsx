@@ -41,22 +41,23 @@ const UserList = ({ sortUsers, searchUsers }) => {
             phone={`${user.phone}`} />)
 
 
-    if (searchUsers) {
-        const filteredData = itemsOfUsers.filter(item =>
-            item.props.name.toLowerCase().includes(searchUsers.toLowerCase()) ||
-            item.props.userName.toLowerCase().includes(searchUsers.toLowerCase())
-        );
-
+    if (!searchUsers) {
         return (
             <div className='flex-hr'>
-                {filteredData}
+                {itemsOfUsers}
             </div>
         )
     }
 
+    const filteredData = itemsOfUsers.filter(item =>
+        item.props.name.toLowerCase().includes(searchUsers.toLowerCase()) ||
+        item.props.userName.toLowerCase().includes(searchUsers.toLowerCase())
+    );
+
+
     return (
         <div className='flex-hr'>
-            {itemsOfUsers}
+            {filteredData.length === 0 ? <div className='empty'>No Results...</div> : filteredData}
         </div>
     );
 };
