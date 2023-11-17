@@ -1,0 +1,18 @@
+@import "./HomePage.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    max-width: 1170px;
+    background-image: url("../image/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px auto;
+    padding: 0px 30px;
+}
