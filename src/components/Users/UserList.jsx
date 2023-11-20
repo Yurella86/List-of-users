@@ -24,7 +24,7 @@ const UserList = ({ sortUsers, searchUsers }) => {
             key={index + 1}
             id={user.id}
             name={`${user.name}`}
-            userName={`${user.userName}`}
+            userName={`${user.username}`}
             email={`${user.email}`}
             phone={`${user.phone}`} />)
 
