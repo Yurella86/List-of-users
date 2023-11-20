@@ -43,7 +43,7 @@ const UserPage = () => {
                             <div className='description'>
                                 <div className='flex-vr'>
                                     <div className='name'>{filteredUser[0].name}
-                                        <span>{`(${filteredUser[0].userName})`}</span>
+                                        <span>{`(${filteredUser[0].username})`}</span>
                                     </div>
                                     <div className='company'>
                                         <strong>Company:</strong><span>{filteredUser[0].company.name}</span>
