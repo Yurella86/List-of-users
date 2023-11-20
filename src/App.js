@@ -5,7 +5,7 @@ import {
   RootLayout
 } from './components/index'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import UserLayout from './components/rout/UserLayout';
+import UserLayout from './components/root/UserLayout';
 import { ApiProvider } from './Store/Api/ApiContext';
 
 

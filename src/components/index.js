@@ -6,7 +6,7 @@ import SearchBar from './search/SearchBar'
 import Albums from './pages/Albums';
 import Posts from './pages/Posts';
 import UserPage from './pages/UserPage';
-import RootLayout from './rout/RootLayout';
+import RootLayout from './root/RootLayout';
 import Loading from './Loading';
 
 export {
