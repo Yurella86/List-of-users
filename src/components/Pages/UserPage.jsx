@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Albums, Loading, Posts, userLogo } from '../index';
 import RegExpPhone from '../RegExPhone';
@@ -10,13 +10,14 @@ const UserPage = () => {
     const [tab, setTab] = useState('post')
     const params = useParams();
 
-    if (!userData) {
-        return <Loading />
+    if (!userData || userData.length === 0) {
+        return <Loading />;
     }
 
     const filteredUser = userData.filter((item =>
         `${item.id}` === params.id
     ))
+    console.log(userData);
 
     let numericOnlyPhone = RegExpPhone(filteredUser[0].phone)
     let formatNumberPhone = numericOnlyPhone.replace(/(\d{3})(\d{3})(\d{4})/, '($1)$2-$3');
