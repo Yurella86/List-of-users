@@ -1,0 +1,82 @@
+.us-page {
+    margin: 50px auto;
+    .wrapper {
+        padding: 0 50px;
+    }
+
+    .flex-hr {
+        justify-content: space-around;
+    }
+
+    .logo {
+        flex-basis: 400px;
+        text-align: center;
+
+        img {
+            max-width: 200px;
+        }
+    }
+
+    .description {
+        flex-basis: 500px;
+
+        .flex-vr {
+            min-height: 300px;
+            justify-content: center;
+        }
+
+        strong {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    }
+
+    .name {
+        margin-top: 20px;
+        font-size: 28px;
+        font-weight: 600;
+        max-height: 60px;
+        flex-grow: 1;
+    }
+
+    .email {
+    }
+
+    .previous-page {
+        position: relative;
+        flex-grow: 1;
+
+        button {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 10px 30px;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .tabs {
+        justify-content: center;
+        button {
+            font-size: 20px;
+            border-radius: 0;
+            margin: 0px 2px;
+            line-height: 32px;
+            background-color: transparent;
+            color: rgb(0, 48, 104);
+            font-weight: 600;
+
+            &.active {
+                background-color: rgb(0, 48, 104);
+                color: white;
+            }
+        }
+    }
+
+    .icon-mail:before {
+        content: "\e990";
+    }
+}
