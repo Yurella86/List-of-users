@@ -1,4 +1,7 @@
-@import "./HomePage.scss";
+@import "./homePage.scss";
+@import "./userPage.scss";
+@import "./posts.scss";
+@import "./albums.scss";
 
 * {
     padding: 0;
@@ -6,6 +9,11 @@
     box-sizing: border-box;
     outline: none;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 body {
@@ -20,4 +28,9 @@ body {
 .empty {
     font-size: 30px;
     margin: 40px auto;
+}
+
+.flex-vr {
+    display: flex;
+    flex-direction: column;
 }
