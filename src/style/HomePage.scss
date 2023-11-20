@@ -16,7 +16,10 @@ section:first-of-type {
 }
 
 section.content {
-    margin: 20px 15px;
+    margin: 30px 15px;
+    .flex-hr {
+        justify-content: center;
+    }
 }
 
 .item {
@@ -84,7 +87,6 @@ section.content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .loading-users {
@@ -118,17 +120,18 @@ section.content {
         color: rgb(0, 81, 173);
         font-weight: 600;
     }
+}
 
-    button {
-        padding: 2px 10px;
-        background-color: rgb(30, 103, 187);
-        color: white;
-        font-weight: 400;
-        border-radius: 3px;
-        border: none;
+button {
+    padding: 2px 10px;
+    background-color: rgb(30, 103, 187);
+    color: white;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    margin-right: 30px;
 
-        &:hover {
-            background-color: rgb(0, 81, 173);
-        }
+    &:hover {
+        background-color: rgb(0, 81, 173);
     }
 }
