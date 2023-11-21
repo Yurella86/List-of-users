@@ -36,6 +36,7 @@ section.content {
     background-color: white;
     transition: all 1s ease;
     border-radius: 4px;
+    z-index: 10;
 
     .wrap-item {
         padding: 20px 10px;
